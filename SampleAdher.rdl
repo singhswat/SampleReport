@@ -1,0 +1,1322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSets>
+    <DataSet Name="dsScheduleDetails">
+      <Query>
+        <DataSourceName>dsrc</DataSourceName>
+        <CommandText>select 
+* 
+from 
+Test</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="MeetingId">
+          <DataField>MeetingId</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MeetingName">
+          <DataField>MeetingName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MeetingCode">
+          <DataField>MeetingCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MeetingStage">
+          <DataField>MeetingStage</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PlannedStartDate">
+          <DataField>PlannedStartDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="PlannedStartdateYear">
+          <DataField>PlannedStartdateYear</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PlannedStartdateWeek">
+          <DataField>PlannedStartdateWeek</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ForecastdateWeek">
+          <DataField>ForecastdateWeek</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ForecastdateYear">
+          <DataField>ForecastdateYear</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="IsMeetingStarted">
+          <DataField>IsMeetingStarted</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ScheduleRevision">
+          <DataField>ScheduleRevision</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="WorkflowOrder">
+          <DataField>WorkflowOrder</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="IsmeetingFailed">
+          <DataField>IsmeetingFailed</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MeetingStartDate">
+          <DataField>MeetingStartDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="MeetingEndDate">
+          <DataField>MeetingEndDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="PlotStartWeek">
+          <DataField>PlotStartWeek</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CERatingDate">
+          <DataField>CERatingDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="MeetingStatusID">
+          <DataField>MeetingStatusID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MinDate">
+          <DataField>MinDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="MaxDate">
+          <DataField>MaxDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="ForPlottingWk">
+          <DataField>ForPlottingWk</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ForPlottingYr">
+          <DataField>ForPlottingYr</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CEGrade">
+          <DataField>CEGrade</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ForecastCERatingDtWK">
+          <DataField>ForecastCERatingDtWK</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ForecastCERatingDtYr">
+          <DataField>ForecastCERatingDtYr</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Tablix Name="ReportMainHeader">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>6.9147cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>16.73679cm</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>17.81528mm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox45">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Meeting schedule</Value>
+                                  <Style>
+                                    <FontFamily>Century Gothic</FontFamily>
+                                    <FontSize>25pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox45</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>dsScheduleDetails</DataSetName>
+            <Top>0mm</Top>
+            <Left>0.00005mm</Left>
+            <Height>17.81528mm</Height>
+            <Width>23.65149cm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+          <Tablix Name="meetingSchedule">
+            <TablixCorner>
+              <TablixCornerRows>
+                <TablixCornerRow>
+                  <TablixCornerCell>
+                    <CellContents>
+                      <Textbox Name="Textbox15">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value />
+                                <Style>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontWeight>Bold</FontWeight>
+                                  <Color>White</Color>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style />
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Textbox15</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Color>LightGrey</Color>
+                            <Style>Solid</Style>
+                          </Border>
+                          <BackgroundColor>White</BackgroundColor>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                      <ColSpan>3</ColSpan>
+                    </CellContents>
+                  </TablixCornerCell>
+                  <TablixCornerCell />
+                  <TablixCornerCell />
+                  <TablixCornerCell>
+                    <CellContents>
+                      <Textbox Name="Textbox20">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value />
+                                <Style>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontWeight>Bold</FontWeight>
+                                  <Color>White</Color>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style />
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Textbox20</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Color>LightGrey</Color>
+                            <Style>Solid</Style>
+                          </Border>
+                          <BackgroundColor>White</BackgroundColor>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixCornerCell>
+                  <TablixCornerCell>
+                    <CellContents>
+                      <Textbox Name="Textbox23">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value />
+                                <Style>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontWeight>Bold</FontWeight>
+                                  <Color>White</Color>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style />
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Textbox23</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Color>LightGrey</Color>
+                            <Style>Solid</Style>
+                          </Border>
+                          <BackgroundColor>White</BackgroundColor>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixCornerCell>
+                </TablixCornerRow>
+                <TablixCornerRow>
+                  <TablixCornerCell>
+                    <CellContents>
+                      <Textbox Name="Textbox2">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>Meeting Name</Value>
+                                <Style>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontWeight>Bold</FontWeight>
+                                  <Color>White</Color>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style />
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Textbox2</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Color>LightGrey</Color>
+                            <Style>Solid</Style>
+                          </Border>
+                          <BackgroundColor>#da5920</BackgroundColor>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixCornerCell>
+                  <TablixCornerCell>
+                    <CellContents>
+                      <Textbox Name="Textbox3">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>Meeting Code</Value>
+                                <Style>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontWeight>Bold</FontWeight>
+                                  <Color>White</Color>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style />
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Textbox3</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Color>LightGrey</Color>
+                            <Style>Solid</Style>
+                          </Border>
+                          <BackgroundColor>#da5920</BackgroundColor>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixCornerCell>
+                  <TablixCornerCell>
+                    <CellContents>
+                      <Textbox Name="Textbox4">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>Meeting Stage</Value>
+                                <Style>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontWeight>Bold</FontWeight>
+                                  <Color>White</Color>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style />
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Textbox4</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Color>LightGrey</Color>
+                            <Style>Solid</Style>
+                          </Border>
+                          <BackgroundColor>#da5920</BackgroundColor>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixCornerCell>
+                  <TablixCornerCell>
+                    <CellContents>
+                      <Textbox Name="Textbox21">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>PlannedDT</Value>
+                                <Style>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontWeight>Bold</FontWeight>
+                                  <Color>White</Color>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style />
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Textbox21</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Color>LightGrey</Color>
+                            <Style>Solid</Style>
+                          </Border>
+                          <BackgroundColor>#da5920</BackgroundColor>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixCornerCell>
+                  <TablixCornerCell>
+                    <CellContents>
+                      <Textbox Name="Textbox24">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>FC date</Value>
+                                <Style>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontWeight>Bold</FontWeight>
+                                  <Color>White</Color>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style />
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Textbox24</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Color>LightGrey</Color>
+                            <Style>Solid</Style>
+                          </Border>
+                          <BackgroundColor>#da5920</BackgroundColor>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixCornerCell>
+                </TablixCornerRow>
+              </TablixCornerRows>
+            </TablixCorner>
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>2.19593cm</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.59241cm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Rectangle Name="Rectangle1">
+                          <ReportItems>
+                            <GaugePanel Name="GaugePanel4">
+                              <StateIndicators>
+                                <StateIndicator Name="IndicatorFail">
+                                  <GaugeInputValue>
+                                    <Value>=iif(Fields!CEGrade.Value = "Fail",  DatePart(DateInterval.WeekOfYear, Fields!MeetingStartDate.Value), 123456)</Value>
+                                    <Multiplier>1</Multiplier>
+                                    <DataElementOutput>NoOutput</DataElementOutput>
+                                  </GaugeInputValue>
+                                  <TransformationType>None</TransformationType>
+                                  <TransformationScope>meetingSchedule</TransformationScope>
+                                  <MinimumValue>
+                                    <Value>NaN</Value>
+                                    <Multiplier>1</Multiplier>
+                                  </MinimumValue>
+                                  <MaximumValue>
+                                    <Value>NaN</Value>
+                                    <Multiplier>1</Multiplier>
+                                  </MaximumValue>
+                                  <IndicatorStyle>None</IndicatorStyle>
+                                  <IndicatorImage>
+                                    <Source>External</Source>
+                                    <Value />
+                                  </IndicatorImage>
+                                  <ScaleFactor>1</ScaleFactor>
+                                  <IndicatorStates>
+                                    <IndicatorState Name="IndicatorState1">
+                                      <StartValue>
+                                        <Value>123456</Value>
+                                        <Multiplier>1</Multiplier>
+                                        <DataElementOutput>NoOutput</DataElementOutput>
+                                      </StartValue>
+                                      <EndValue>
+                                        <Value>123456</Value>
+                                        <Multiplier>1</Multiplier>
+                                        <DataElementOutput>NoOutput</DataElementOutput>
+                                      </EndValue>
+                                      <Color>#00ffffff</Color>
+                                      <ScaleFactor>1</ScaleFactor>
+                                      <IndicatorStyle>None</IndicatorStyle>
+                                      <IndicatorImage>
+                                        <Source>External</Source>
+                                        <Value />
+                                      </IndicatorImage>
+                                    </IndicatorState>
+                                    <IndicatorState Name="ThreeSignsTriangle">
+                                      <StartValue>
+                                        <Value>1</Value>
+                                        <Multiplier>1</Multiplier>
+                                      </StartValue>
+                                      <EndValue>
+                                        <Value>99999999999</Value>
+                                        <Multiplier>1</Multiplier>
+                                      </EndValue>
+                                      <Color>Red</Color>
+                                      <ScaleFactor>1</ScaleFactor>
+                                      <IndicatorStyle>ThreeSymbolUnCircledCross</IndicatorStyle>
+                                      <IndicatorImage>
+                                        <Source>External</Source>
+                                        <Value />
+                                      </IndicatorImage>
+                                    </IndicatorState>
+                                  </IndicatorStates>
+                                  <Angle>0</Angle>
+                                  <StateDataElementName />
+                                  <rd:IconsSet>ThreeSigns</rd:IconsSet>
+                                  <Style>
+                                    <ShadowOffset>2pt</ShadowOffset>
+                                  </Style>
+                                  <Top>4</Top>
+                                  <Left>4</Left>
+                                  <Height>92</Height>
+                                  <Width>92</Width>
+                                </StateIndicator>
+                              </StateIndicators>
+                              <AutoLayout>true</AutoLayout>
+                              <BackFrame>
+                                <Style>
+                                  <Border>
+                                    <Style>None</Style>
+                                  </Border>
+                                  <BackgroundColor>Gainsboro</BackgroundColor>
+                                  <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+                                  <BackgroundGradientEndColor>Gray</BackgroundGradientEndColor>
+                                  <BackgroundHatchType>None</BackgroundHatchType>
+                                  <ShadowOffset>0pt</ShadowOffset>
+                                </Style>
+                                <FrameBackground>
+                                  <Style>
+                                    <BackgroundColor>Silver</BackgroundColor>
+                                    <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+                                    <BackgroundGradientEndColor>Gray</BackgroundGradientEndColor>
+                                    <BackgroundHatchType>None</BackgroundHatchType>
+                                  </Style>
+                                </FrameBackground>
+                                <FrameImage>
+                                  <Source>External</Source>
+                                  <Value />
+                                </FrameImage>
+                              </BackFrame>
+                              <TopImage>
+                                <Source>External</Source>
+                                <Value />
+                              </TopImage>
+                              <DataSetName>dsScheduleDetails</DataSetName>
+                              <Left>1.53cm</Left>
+                              <Height>0.5cm</Height>
+                              <Width>0.5cm</Width>
+                              <Style>
+                                <Border>
+                                  <Color>LightGrey</Color>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>White</BackgroundColor>
+                              </Style>
+                            </GaugePanel>
+                            <GaugePanel Name="ForecastDT">
+                              <StateIndicators>
+                                <StateIndicator Name="ActualPassDate">
+                                  <GaugeInputValue>
+                                    <Value>=Fields!ForecastdateWeek.Value</Value>
+                                    <Multiplier>1</Multiplier>
+                                    <DataElementOutput>NoOutput</DataElementOutput>
+                                  </GaugeInputValue>
+                                  <TransformationType>None</TransformationType>
+                                  <TransformationScope>meetingSchedule</TransformationScope>
+                                  <MinimumValue>
+                                    <Value>NaN</Value>
+                                    <Multiplier>1</Multiplier>
+                                  </MinimumValue>
+                                  <MaximumValue>
+                                    <Value>NaN</Value>
+                                    <Multiplier>1</Multiplier>
+                                  </MaximumValue>
+                                  <IndicatorStyle>None</IndicatorStyle>
+                                  <IndicatorImage>
+                                    <Source>External</Source>
+                                    <Value />
+                                  </IndicatorImage>
+                                  <ScaleFactor>1</ScaleFactor>
+                                  <IndicatorStates>
+                                    <IndicatorState Name="ThreeSignsCircle">
+                                      <StartValue>
+                                        <Value>0</Value>
+                                        <Multiplier>1</Multiplier>
+                                      </StartValue>
+                                      <EndValue>
+                                        <Value>999999999999999</Value>
+                                        <Multiplier>1</Multiplier>
+                                      </EndValue>
+                                      <Color>Indigo</Color>
+                                      <ScaleFactor>1</ScaleFactor>
+                                      <IndicatorStyle>ThreeSignsCircle</IndicatorStyle>
+                                      <IndicatorImage>
+                                        <Source>External</Source>
+                                        <Value />
+                                      </IndicatorImage>
+                                    </IndicatorState>
+                                  </IndicatorStates>
+                                  <Angle>0</Angle>
+                                  <StateDataElementName />
+                                  <rd:IconsSet>ThreeSigns</rd:IconsSet>
+                                  <Style>
+                                    <ShadowOffset>2pt</ShadowOffset>
+                                  </Style>
+                                  <Top>4</Top>
+                                  <Left>4</Left>
+                                  <Height>92</Height>
+                                  <Width>92</Width>
+                                </StateIndicator>
+                              </StateIndicators>
+                              <AutoLayout>true</AutoLayout>
+                              <BackFrame>
+                                <Style>
+                                  <Border>
+                                    <Style>None</Style>
+                                  </Border>
+                                  <BackgroundColor>Gainsboro</BackgroundColor>
+                                  <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+                                  <BackgroundGradientEndColor>Gray</BackgroundGradientEndColor>
+                                  <BackgroundHatchType>None</BackgroundHatchType>
+                                  <ShadowOffset>0pt</ShadowOffset>
+                                </Style>
+                                <FrameBackground>
+                                  <Style>
+                                    <BackgroundColor>Silver</BackgroundColor>
+                                    <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+                                    <BackgroundGradientEndColor>Gray</BackgroundGradientEndColor>
+                                    <BackgroundHatchType>None</BackgroundHatchType>
+                                  </Style>
+                                </FrameBackground>
+                                <FrameImage>
+                                  <Source>External</Source>
+                                  <Value />
+                                </FrameImage>
+                              </BackFrame>
+                              <TopImage>
+                                <Source>External</Source>
+                                <Value />
+                              </TopImage>
+                              <DataSetName>dsScheduleDetails</DataSetName>
+                              <Left>0.53cm</Left>
+                              <Height>0.5cm</Height>
+                              <Width>0.5cm</Width>
+                              <ZIndex>1</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Color>LightGrey</Color>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>White</BackgroundColor>
+                              </Style>
+                            </GaugePanel>
+                            <GaugePanel Name="PlannedDate">
+                              <StateIndicators>
+                                <StateIndicator Name="IndicatorPlannedStartDt">
+                                  <GaugeInputValue>
+                                    <Value>=DatePart(DateInterval.WeekOfYear, Fields!PlannedStartDate.Value).ToString</Value>
+                                    <Multiplier>1</Multiplier>
+                                    <DataElementOutput>NoOutput</DataElementOutput>
+                                  </GaugeInputValue>
+                                  <TransformationType>None</TransformationType>
+                                  <TransformationScope>meetingSchedule</TransformationScope>
+                                  <MinimumValue>
+                                    <Value>NaN</Value>
+                                    <Multiplier>1</Multiplier>
+                                  </MinimumValue>
+                                  <MaximumValue>
+                                    <Value>NaN</Value>
+                                    <Multiplier>1</Multiplier>
+                                  </MaximumValue>
+                                  <IndicatorStyle>None</IndicatorStyle>
+                                  <IndicatorImage>
+                                    <Source>External</Source>
+                                    <Value />
+                                  </IndicatorImage>
+                                  <ScaleFactor>1</ScaleFactor>
+                                  <IndicatorStates>
+                                    <IndicatorState Name="ThreeSignsTriangle">
+                                      <StartValue>
+                                        <Value>2</Value>
+                                        <Multiplier>1</Multiplier>
+                                      </StartValue>
+                                      <EndValue>
+                                        <Value>999999999</Value>
+                                        <Multiplier>1</Multiplier>
+                                      </EndValue>
+                                      <Color>Yellow</Color>
+                                      <ScaleFactor>1</ScaleFactor>
+                                      <IndicatorStyle>ThreeSignsTriangle</IndicatorStyle>
+                                      <IndicatorImage>
+                                        <Source>External</Source>
+                                        <Value />
+                                      </IndicatorImage>
+                                    </IndicatorState>
+                                  </IndicatorStates>
+                                  <Angle>0</Angle>
+                                  <StateDataElementName />
+                                  <rd:IconsSet>ThreeSigns</rd:IconsSet>
+                                  <Style>
+                                    <ShadowOffset>2pt</ShadowOffset>
+                                  </Style>
+                                  <Top>4</Top>
+                                  <Left>4</Left>
+                                  <Height>92</Height>
+                                  <Width>92</Width>
+                                  <ToolTip>Planned start date</ToolTip>
+                                </StateIndicator>
+                              </StateIndicators>
+                              <AutoLayout>true</AutoLayout>
+                              <BackFrame>
+                                <Style>
+                                  <Border>
+                                    <Style>None</Style>
+                                  </Border>
+                                  <BackgroundColor>Gainsboro</BackgroundColor>
+                                  <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+                                  <BackgroundGradientEndColor>Gray</BackgroundGradientEndColor>
+                                  <BackgroundHatchType>None</BackgroundHatchType>
+                                  <ShadowOffset>0pt</ShadowOffset>
+                                </Style>
+                                <FrameBackground>
+                                  <Style>
+                                    <BackgroundColor>Silver</BackgroundColor>
+                                    <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+                                    <BackgroundGradientEndColor>Gray</BackgroundGradientEndColor>
+                                    <BackgroundHatchType>None</BackgroundHatchType>
+                                  </Style>
+                                </FrameBackground>
+                                <FrameImage>
+                                  <Source>External</Source>
+                                  <Value />
+                                </FrameImage>
+                              </BackFrame>
+                              <TopImage>
+                                <Source>External</Source>
+                                <Value />
+                              </TopImage>
+                              <DataSetName>dsScheduleDetails</DataSetName>
+                              <Left>0.03cm</Left>
+                              <Height>0.5cm</Height>
+                              <Width>0.5cm</Width>
+                              <ZIndex>2</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Color>LightGrey</Color>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>White</BackgroundColor>
+                              </Style>
+                            </GaugePanel>
+                            <GaugePanel Name="GaugePanel1">
+                              <StateIndicators>
+                                <StateIndicator Name="IndicatorActualPass">
+                                  <GaugeInputValue>
+                                    <Value>=iif(fields!CEGrade.Value = "Pass",  DatePart(DateInterval.WeekOfYear, Fields!CERatingDate.Value).ToString, 0)</Value>
+                                    <Multiplier>1</Multiplier>
+                                    <DataElementOutput>NoOutput</DataElementOutput>
+                                  </GaugeInputValue>
+                                  <TransformationType>None</TransformationType>
+                                  <TransformationScope>meetingSchedule</TransformationScope>
+                                  <MinimumValue>
+                                    <Value>NaN</Value>
+                                    <Multiplier>1</Multiplier>
+                                  </MinimumValue>
+                                  <MaximumValue>
+                                    <Value>NaN</Value>
+                                    <Multiplier>1</Multiplier>
+                                  </MaximumValue>
+                                  <IndicatorStyle>None</IndicatorStyle>
+                                  <IndicatorImage>
+                                    <Source>External</Source>
+                                    <Value />
+                                  </IndicatorImage>
+                                  <ScaleFactor>1</ScaleFactor>
+                                  <IndicatorStates>
+                                    <IndicatorState Name="ThreeSymbolCheck">
+                                      <StartValue>
+                                        <Value>1</Value>
+                                        <Multiplier>1</Multiplier>
+                                      </StartValue>
+                                      <EndValue>
+                                        <Value>100</Value>
+                                        <Multiplier>1</Multiplier>
+                                      </EndValue>
+                                      <Color>Green</Color>
+                                      <ScaleFactor>1</ScaleFactor>
+                                      <IndicatorStyle>ThreeSymbolCheck</IndicatorStyle>
+                                      <IndicatorImage>
+                                        <Source>External</Source>
+                                        <Value />
+                                      </IndicatorImage>
+                                    </IndicatorState>
+                                  </IndicatorStates>
+                                  <Angle>0</Angle>
+                                  <StateDataElementName />
+                                  <rd:IconsSet>ThreeCircledSymbols</rd:IconsSet>
+                                  <Style>
+                                    <ShadowOffset>2pt</ShadowOffset>
+                                  </Style>
+                                  <Top>4</Top>
+                                  <Left>4</Left>
+                                  <Height>92</Height>
+                                  <Width>92</Width>
+                                </StateIndicator>
+                              </StateIndicators>
+                              <AutoLayout>true</AutoLayout>
+                              <BackFrame>
+                                <Style>
+                                  <Border>
+                                    <Style>None</Style>
+                                  </Border>
+                                  <BackgroundColor>Gainsboro</BackgroundColor>
+                                  <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+                                  <BackgroundGradientEndColor>Gray</BackgroundGradientEndColor>
+                                  <BackgroundHatchType>None</BackgroundHatchType>
+                                  <ShadowOffset>0pt</ShadowOffset>
+                                </Style>
+                                <FrameBackground>
+                                  <Style>
+                                    <BackgroundColor>Silver</BackgroundColor>
+                                    <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+                                    <BackgroundGradientEndColor>Gray</BackgroundGradientEndColor>
+                                    <BackgroundHatchType>None</BackgroundHatchType>
+                                  </Style>
+                                </FrameBackground>
+                                <FrameImage>
+                                  <Source>External</Source>
+                                  <Value />
+                                </FrameImage>
+                              </BackFrame>
+                              <TopImage>
+                                <Source>External</Source>
+                                <Value />
+                              </TopImage>
+                              <DataSetName>dsScheduleDetails</DataSetName>
+                              <Left>1.03cm</Left>
+                              <Height>0.5cm</Height>
+                              <Width>0.5cm</Width>
+                              <ZIndex>3</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Color>LightGrey</Color>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>White</BackgroundColor>
+                              </Style>
+                            </GaugePanel>
+                          </ReportItems>
+                          <KeepTogether>true</KeepTogether>
+                          <Style>
+                            <Border>
+                              <Color>Silver</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                          </Style>
+                        </Rectangle>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="PSdateYear">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!PlannedStartdateYear.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <TablixHeader>
+                    <Size>0.59057cm</Size>
+                    <CellContents>
+                      <Textbox Name="PSdateYear">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>=Fields!PlannedStartdateYear.Value</Value>
+                                <Style>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <FontWeight>Bold</FontWeight>
+                                  <Color>White</Color>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>PSdateYear</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Color>LightGrey</Color>
+                            <Style>Solid</Style>
+                          </Border>
+                          <BackgroundColor>DimGray</BackgroundColor>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                  <TablixMembers>
+                    <TablixMember>
+                      <Group Name="PlannedStartDate">
+                        <GroupExpressions>
+                          <GroupExpression>=Fields!PlannedStartDate.Value</GroupExpression>
+                        </GroupExpressions>
+                      </Group>
+                      <SortExpressions>
+                        <SortExpression>
+                          <Value>=Fields!PlannedStartDate.Value</Value>
+                        </SortExpression>
+                      </SortExpressions>
+                      <TablixMembers>
+                        <TablixMember>
+                          <TablixHeader>
+                            <Size>1.20945cm</Size>
+                            <CellContents>
+                              <Textbox Name="PSdateWeek">
+                                <CanGrow>true</CanGrow>
+                                <KeepTogether>true</KeepTogether>
+                                <Paragraphs>
+                                  <Paragraph>
+                                    <TextRuns>
+                                      <TextRun>
+                                        <Value>="WK - "+DatePart(DateInterval.WeekOfYear, Fields!PlannedStartDate.Value).ToString</Value>
+                                        <Style>
+                                          <FontFamily>Century Gothic</FontFamily>
+                                          <FontWeight>Bold</FontWeight>
+                                          <Color>White</Color>
+                                        </Style>
+                                      </TextRun>
+                                    </TextRuns>
+                                    <Style />
+                                  </Paragraph>
+                                </Paragraphs>
+                                <rd:DefaultName>PSdateWeek</rd:DefaultName>
+                                <Style>
+                                  <Border>
+                                    <Color>LightGrey</Color>
+                                    <Style>Solid</Style>
+                                  </Border>
+                                  <BackgroundColor>#da5920</BackgroundColor>
+                                  <PaddingLeft>2pt</PaddingLeft>
+                                  <PaddingRight>2pt</PaddingRight>
+                                  <PaddingTop>2pt</PaddingTop>
+                                  <PaddingBottom>2pt</PaddingBottom>
+                                </Style>
+                              </Textbox>
+                            </CellContents>
+                          </TablixHeader>
+                        </TablixMember>
+                      </TablixMembers>
+                    </TablixMember>
+                  </TablixMembers>
+                </TablixMember>
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="MN">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!MeetingName.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!MeetingName.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <TablixHeader>
+                    <Size>4.41161cm</Size>
+                    <CellContents>
+                      <Textbox Name="MeetingName">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>=Fields!MeetingName.Value</Value>
+                                <Style>
+                                  <FontFamily>Century Gothic</FontFamily>
+                                  <Color>DimGray</Color>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style />
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>MeetingName</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Color>LightGrey</Color>
+                            <Style>Solid</Style>
+                          </Border>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                  <TablixMembers>
+                    <TablixMember>
+                      <Group Name="MC">
+                        <GroupExpressions>
+                          <GroupExpression>=Fields!MeetingCode.Value</GroupExpression>
+                        </GroupExpressions>
+                      </Group>
+                      <SortExpressions>
+                        <SortExpression>
+                          <Value>=Fields!MeetingCode.Value</Value>
+                        </SortExpression>
+                      </SortExpressions>
+                      <TablixHeader>
+                        <Size>2.49309cm</Size>
+                        <CellContents>
+                          <Textbox Name="MeetingCode">
+                            <CanGrow>true</CanGrow>
+                            <KeepTogether>true</KeepTogether>
+                            <Paragraphs>
+                              <Paragraph>
+                                <TextRuns>
+                                  <TextRun>
+                                    <Value>=Fields!MeetingCode.Value</Value>
+                                    <Style>
+                                      <FontFamily>Century Gothic</FontFamily>
+                                      <Color>DimGray</Color>
+                                    </Style>
+                                  </TextRun>
+                                </TextRuns>
+                                <Style />
+                              </Paragraph>
+                            </Paragraphs>
+                            <rd:DefaultName>MeetingCode</rd:DefaultName>
+                            <Style>
+                              <Border>
+                                <Color>LightGrey</Color>
+                                <Style>Solid</Style>
+                              </Border>
+                              <PaddingLeft>2pt</PaddingLeft>
+                              <PaddingRight>2pt</PaddingRight>
+                              <PaddingTop>2pt</PaddingTop>
+                              <PaddingBottom>2pt</PaddingBottom>
+                            </Style>
+                          </Textbox>
+                        </CellContents>
+                      </TablixHeader>
+                      <TablixMembers>
+                        <TablixMember>
+                          <Group Name="MS">
+                            <GroupExpressions>
+                              <GroupExpression>=Fields!MeetingStage.Value</GroupExpression>
+                            </GroupExpressions>
+                          </Group>
+                          <SortExpressions>
+                            <SortExpression>
+                              <Value>=Fields!MeetingName.Value</Value>
+                            </SortExpression>
+                            <SortExpression>
+                              <Value>=Fields!MeetingCode.Value</Value>
+                            </SortExpression>
+                            <SortExpression>
+                              <Value>=Fields!MeetingStage.Value</Value>
+                            </SortExpression>
+                          </SortExpressions>
+                          <TablixHeader>
+                            <Size>1.99395cm</Size>
+                            <CellContents>
+                              <Textbox Name="MeetingStage">
+                                <CanGrow>true</CanGrow>
+                                <KeepTogether>true</KeepTogether>
+                                <Paragraphs>
+                                  <Paragraph>
+                                    <TextRuns>
+                                      <TextRun>
+                                        <Value>=Fields!MeetingStage.Value</Value>
+                                        <Style>
+                                          <FontFamily>Century Gothic</FontFamily>
+                                          <Color>DimGray</Color>
+                                        </Style>
+                                      </TextRun>
+                                    </TextRuns>
+                                    <Style />
+                                  </Paragraph>
+                                </Paragraphs>
+                                <rd:DefaultName>MeetingStage</rd:DefaultName>
+                                <Style>
+                                  <Border>
+                                    <Color>LightGrey</Color>
+                                    <Style>Solid</Style>
+                                  </Border>
+                                  <PaddingLeft>2pt</PaddingLeft>
+                                  <PaddingRight>2pt</PaddingRight>
+                                  <PaddingTop>2pt</PaddingTop>
+                                  <PaddingBottom>2pt</PaddingBottom>
+                                </Style>
+                              </Textbox>
+                            </CellContents>
+                          </TablixHeader>
+                          <TablixMembers>
+                            <TablixMember>
+                              <TablixHeader>
+                                <Size>2.12958cm</Size>
+                                <CellContents>
+                                  <Textbox Name="Textbox22">
+                                    <CanGrow>true</CanGrow>
+                                    <KeepTogether>true</KeepTogether>
+                                    <Paragraphs>
+                                      <Paragraph>
+                                        <TextRuns>
+                                          <TextRun>
+                                            <Value>=DatePart(DateInterval.WeekOfYear, Fields!PlannedStartDate.Value).ToString</Value>
+                                            <Style>
+                                              <FontFamily>Century Gothic</FontFamily>
+                                              <Color>DimGray</Color>
+                                            </Style>
+                                          </TextRun>
+                                        </TextRuns>
+                                        <Style />
+                                      </Paragraph>
+                                    </Paragraphs>
+                                    <rd:DefaultName>Textbox22</rd:DefaultName>
+                                    <Style>
+                                      <Border>
+                                        <Color>LightGrey</Color>
+                                        <Style>Solid</Style>
+                                      </Border>
+                                      <PaddingLeft>2pt</PaddingLeft>
+                                      <PaddingRight>2pt</PaddingRight>
+                                      <PaddingTop>2pt</PaddingTop>
+                                      <PaddingBottom>2pt</PaddingBottom>
+                                    </Style>
+                                  </Textbox>
+                                </CellContents>
+                              </TablixHeader>
+                              <TablixMembers>
+                                <TablixMember>
+                                  <TablixHeader>
+                                    <Size>1.60042cm</Size>
+                                    <CellContents>
+                                      <Textbox Name="Textbox25">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>=Fields!ForecastdateWeek.Value</Value>
+                                                <Style>
+                                                  <FontFamily>Century Gothic</FontFamily>
+                                                  <Color>DimGray</Color>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style />
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox25</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Color>LightGrey</Color>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixHeader>
+                                  <TablixMembers>
+                                    <TablixMember />
+                                  </TablixMembers>
+                                </TablixMember>
+                              </TablixMembers>
+                            </TablixMember>
+                          </TablixMembers>
+                        </TablixMember>
+                      </TablixMembers>
+                    </TablixMember>
+                  </TablixMembers>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <RepeatColumnHeaders>true</RepeatColumnHeaders>
+            <FixedColumnHeaders>true</FixedColumnHeaders>
+            <DataSetName>dsScheduleDetails</DataSetName>
+            <Top>1.8cm</Top>
+            <Left>0.01cm</Left>
+            <Height>2.39243cm</Height>
+            <Width>14.82458cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+        </ReportItems>
+        <Height>1.65056in</Height>
+        <Style />
+      </Body>
+      <Width>9.31161in</Width>
+      <Page>
+        <PageHeight>29.7cm</PageHeight>
+        <PageWidth>21cm</PageWidth>
+        <LeftMargin>2cm</LeftMargin>
+        <RightMargin>2cm</RightMargin>
+        <TopMargin>2cm</TopMargin>
+        <BottomMargin>2cm</BottomMargin>
+        <ColumnSpacing>0.13cm</ColumnSpacing>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>3e9039a1-6fcd-471b-bb8e-1f977713bd07</rd:ReportID>
+</Report>
